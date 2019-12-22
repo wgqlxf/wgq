@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+    <input type="checkbox"name="love"/>篮球
+    <input type="checkbox"name="love"/>排球
+    <input type="checkbox"name="love"/>羽毛球
+    <input type="checkbox"name="love"/>乒乓球
+    <br/>
+    <input type="button"value="全选"οnclick="selAll()"/>
+    <input type="button"value="全不选"οnclick="selNo()">
+    <input type="button"value="反选"οnclick="selOther()">
+</body>
+<script>
+    function selAll(){
+        var all=document.getElementsByName("love")
+        for(var i=0;i<all.length;i++)
+        {
+            var a=all[i];
+            a.checked=true;
+        }
+    }
+    function selNo(){
+        var all=document.getElementsByName("love")
+        for(var i=0;i<all.length;i++)
+        {
+            var a=all[i];
+            a.checked=false;
+        }
+    }
+    function selOther(){
+        var all=document.getElementsByName("love")
+        for(var i=0;i<all.length;i++){
+            var a=all[i];
+            a.checked=!a.checked;
+        }
+    }
+</script>
+
+</html>
+
